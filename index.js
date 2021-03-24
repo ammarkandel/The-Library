@@ -31,7 +31,7 @@ function addBooksToLibrary() {
   readBtn.addEventListener('click', newBook.status);
 
   const lastItem = myLibrary.pop();
-  li.textContent = `title:: ${lastItem.title} -- author:: ${lastItem.author} -- pages numbers:: ${lastItem.pages}`
+  li.textContent = `title:: ${lastItem.title} -- author:: ${lastItem.author} -- pages numbers:: ${lastItem.pages}`;
   rmBtn.textContent = 'REMOVE BOOK';
   displayBooks.appendChild(li);
   li.appendChild(rmBtn);
