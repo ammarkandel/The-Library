@@ -8,6 +8,11 @@
 - Mark book as read
 - Remove book from library
 
+## How to run this project
+
+- First: clone the repo and open the folder
+- Second: open index.html file with chrome or any browser (prefer chrome)
+
 ## Author
 
 👤 **Ammar El refay Kandel**
