@@ -19,14 +19,13 @@ function addBooksToLibrary() {
   readBtn.textContent = 'not read yet';
   Book.prototype.status = () => {
     readBtn.classList.toggle('true_value');
-    if (readBtn.textContent == 'not read yet') {
+    if (readBtn.textContent === 'not read yet') {
       readBtn.textContent = 'already read';
       return true;
-    } else {
-      readBtn.textContent = 'not read yet';
-      return false;
     }
-  }
+    readBtn.textContent = 'not read yet';
+    return false;
+  };
 
   myLibrary.push(newBook);
   readBtn.addEventListener('click', newBook.status);
@@ -44,10 +43,10 @@ const theForm = document.querySelector('#book_form');
 const submitBtn = document.getElementById('submit');
 
 newBookBtn.addEventListener('click', () => {
-  theForm.setAttribute("style", "display: block");
-})
+  theForm.setAttribute('style', 'display: block');
+});
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addBooksToLibrary();
-})
+});
