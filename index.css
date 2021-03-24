@@ -5,9 +5,13 @@
   justify-content: space-between;
 }
 
+.display-books li {
+  border: 1px solid rgba(109, 108, 108, 0.5);
+  margin: 3px;
+}
+
 button {
   display: block;
-  border: none;
 }
 
 #book_form {
