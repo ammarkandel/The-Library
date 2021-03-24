@@ -7,17 +7,32 @@ function Book(title, author, pages) {
 
 function addBooksToLibrary() {
   let newBook = new Book(title.value, author.value, pages.value)
-  myLibrary.push(newBook)
-
+  const readBtn = document.createElement('button')
+  const rmBtn = document.createElement('button')
   const displayBooks = document.querySelector('.display-books')
   const li = document.createElement('li')
-  const rmBtn = document.createElement('button')
+
+  readBtn.textContent = 'not read yet'
+  Book.prototype.status = function() {
+    readBtn.classList.toggle('true_value')
+    if (readBtn.textContent == 'not read yet') {
+      readBtn.textContent = 'already read'
+      return true
+    } else {
+      readBtn.textContent = 'not read yet'
+      return false
+    }
+  }
+
+  readBtn.addEventListener('click', newBook.status)
+  myLibrary.push(newBook)
+
     lastItem = myLibrary.pop()
     li.textContent = 'Title: ' + lastItem.title + ' ,Author: ' + lastItem.author + ' ,Pages: ' + lastItem.pages
-    rmBtn.textContent = 'REMOVE BOOk'
+    rmBtn.textContent = 'REMOVE BOOK'
     displayBooks.appendChild(li)
     li.appendChild(rmBtn)
-    // will add remove function
+    li.appendChild(readBtn)
 }
 
 const newBookBtn = document.getElementById('new_book')

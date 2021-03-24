@@ -7,8 +7,13 @@
 
 button {
   display: block;
+  border: none;
 }
 
 #book_form {
   display: none;
+}
+
+.true_value {
+  background-color: green;
 }
